@@ -1,8 +1,13 @@
 {
-    "name": "Food Finder",
-    "build": { "dockerfile": "../Dockerfile" },
+    "name": "Food Finder Application",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-20.04",
+    "runArgs": ["--privileged", "--volume=/var/lib/docker"],
     "workspaceFolder": "/workspace",
-    "forwardPorts": [27017],
-    "postCreateCommand": ". /workspace/setup_docker.sh",
-    "runArgs": ["--volume=/var/lib/docker", "--privileged"]
-}
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y docker docker-compose",
+    "forwardPorts": [3000, 27017],
+    "extensions": [
+      "ms-azuretools.vscode-docker"
+    ],
+    "postStartCommand": "dockerd &"
+  }
+  
