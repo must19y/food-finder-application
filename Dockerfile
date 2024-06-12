@@ -1,10 +1,8 @@
-FROM alpine:3.15.4
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-20.04
 
-RUN apk update
-RUN apk add --no-cache git
-RUN apk add --no-cache docker
-RUN apk add --no-cache docker-compose
+RUN apt-get update && apt-get install -y git
 
 ADD . /workspace
 
 EXPOSE 27017
+

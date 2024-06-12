@@ -8,6 +8,6 @@
     "extensions": [
       "ms-azuretools.vscode-docker"
     ],
-    "postStartCommand": "dockerd &"
+    "postStartCommand": "sudo dockerd &"
   }
   
