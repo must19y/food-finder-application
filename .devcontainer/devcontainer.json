@@ -3,7 +3,7 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu-20.04",
     "runArgs": ["--privileged", "--volume=/var/lib/docker"],
     "workspaceFolder": "/workspace",
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y docker docker-compose",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y docker.io docker-compose",
     "forwardPorts": [3000, 27017],
     "extensions": [
       "ms-azuretools.vscode-docker"
