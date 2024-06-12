@@ -1,0 +1,8 @@
+{
+    "name": "Food Finder",
+    "build": { "dockerfile": "../Dockerfile" },
+    "workspaceFolder": "/workspace",
+    "forwardPorts": [27017],
+    "postCreateCommand": ". /workspace/setup_docker.sh",
+    "runArgs": ["--volume=/var/lib/docker", "--privileged"]
+}
