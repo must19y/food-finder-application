@@ -1,10 +1,8 @@
 {
   "name": "Food Finder Application",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-20.04",
-  "runArgs": ["--privileged", "--volume=/var/lib/docker"],
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "backend",  // Ensure this matches the correct service in your docker-compose.yml
   "workspaceFolder": "/workspace",
-  "postCreateCommand": "apt-get update && apt-get install -y docker.io docker-compose",
-  "forwardPorts": [3000, 27017],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -12,5 +10,7 @@
       ]
     }
   },
+  "forwardPorts": [3000, 27017],
+  "postCreateCommand": "apt-get update && apt-get install -y docker.io docker-compose",
   "postStartCommand": "dockerd &"
 }
