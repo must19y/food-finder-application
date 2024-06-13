@@ -1,6 +1,6 @@
 {
   "name": "Food Finder Application",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": "../foodfinder/docker-compose.yml",
   "service": "backend",  // Ensure this matches the correct service in your docker-compose.yml
   "workspaceFolder": "/workspace",
   "customizations": {
