@@ -12,5 +12,5 @@
       ]
     }
   },
-  "postStartCommand": "dockerd &"
+  "postStartCommand": "sudo dockerd &"
 }
