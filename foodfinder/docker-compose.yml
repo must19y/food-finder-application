@@ -39,6 +39,7 @@ services:
             - CHOKIDAR_INTERVAL=100
         # keep container alive for installing next.js
         tty: true
+        user: "${MY_USER}"
         command: "npm run dev"
     
 
