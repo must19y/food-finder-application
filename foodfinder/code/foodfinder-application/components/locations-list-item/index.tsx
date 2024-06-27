@@ -18,9 +18,9 @@ const LocationsListItem = (props: PropsInterface): JSX.Element => {
                 <li className={styles.root}>
                     <Link href={`/location/${location.location_id}`}>
                         <h2>
-                            {location.name}
+                            {String(location.name)}
                             <small className={styles.details}>
-                                {location.cuisine} in {location.borough}
+                                {String(location.cuisine)} in {String(location.borough)}
                             </small>
                         </h2>
                     </Link>

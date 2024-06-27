@@ -13,11 +13,11 @@ interface PropsInterface {
 const LocationsList = (props: PropsInterface): JSX.Element => {
     return (
         <ul className={styles.root}>
-            {props.locations.map((location) => {
+            {props.locations.map((location:LocationType) => {
                 return (
                     <LocationsListItem
                         location={location}
-                        key={location.location_id}
+                        key={String(location.location_id)}
                     />
                 );
             })}
