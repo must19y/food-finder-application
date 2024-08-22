@@ -14,3 +14,7 @@ Managing  data with the MongoDB NoSQL database
 Use of  OAuth to simplify user management, authentication, and authorization
 Automated testing with Jest, test-driven development, stubs, mocks, and fakes.
 
+
+Use of Docker:
+Managing compatibilites related to versions and faster development using  docker.
+
